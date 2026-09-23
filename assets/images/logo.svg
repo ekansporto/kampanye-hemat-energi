@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none">
+  <rect width="40" height="40" rx="10" fill="url(#brandGrad)" />
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2d6a4f" />
+      <stop offset="100%" stop-color="#1b4332" />
+    </linearGradient>
+  </defs>
+  <!-- Eco Leaf Shape -->
+  <path d="M 27 11 C 17 11 11 19 11 27 C 19 27 27 21 27 11 Z" fill="#52b788" opacity="0.9" />
+  <!-- Energy Bolt Overlay -->
+  <path d="M 21 12 L 14 22 L 20 22 L 18 29 L 26 19 L 20 19 Z" fill="#fbbf24" stroke="#d97706" stroke-width="0.75" />
+</svg>

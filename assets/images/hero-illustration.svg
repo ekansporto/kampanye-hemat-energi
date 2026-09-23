@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" fill="none">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ebfbee" />
+      <stop offset="100%" stop-color="#d8f3dc" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <linearGradient id="bulbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7" />
+      <stop offset="100%" stop-color="#fde68a" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#52b788" />
+      <stop offset="100%" stop-color="#2d6a4f" />
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+    <linearGradient id="groundGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#40916c" />
+      <stop offset="100%" stop-color="#1b4332" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Aura -->
+  <circle cx="280" cy="220" r="180" fill="url(#skyGrad)" opacity="0.6" />
+
+  <!-- Sun Rays & Sun -->
+  <circle cx="430" cy="90" r="45" fill="url(#sunGrad)" filter="url(#softGlow)" opacity="0.9" />
+  <circle cx="430" cy="90" r="32" fill="#f59e0b" />
+  <circle cx="430" cy="90" r="26" fill="#fbbf24" />
+
+  <!-- Sun Energy Particles -->
+  <circle cx="370" cy="80" r="4" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="400" cy="150" r="3" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="475" cy="140" r="4" fill="#fbbf24" opacity="0.6"/>
+
+  <!-- Earth Hill Base -->
+  <path d="M 40 380 Q 280 280 520 380 L 520 420 L 40 420 Z" fill="url(#groundGrad)" />
+  <path d="M 90 380 Q 280 320 470 380" stroke="#74c69d" stroke-width="4" stroke-dasharray="6 8" opacity="0.4" fill="none" />
+
+  <!-- School / Modern Eco Building -->
+  <rect x="210" y="220" width="140" height="130" rx="8" fill="#ffffff" stroke="#d8f3dc" stroke-width="2" />
+  <rect x="235" y="240" width="30" height="30" rx="4" fill="#95d5b2" opacity="0.7" />
+  <rect x="295" y="240" width="30" height="30" rx="4" fill="#95d5b2" opacity="0.7" />
+  <rect x="235" y="290" width="30" height="30" rx="4" fill="#95d5b2" opacity="0.7" />
+  <rect x="295" y="290" width="30" height="30" rx="4" fill="#95d5b2" opacity="0.7" />
+  <path d="M 265 350 L 265 315 L 295 315 L 295 350 Z" fill="#2d6a4f" />
+  <!-- Building Roof Solar Panel Array -->
+  <polygon points="195,220 280,170 365,220" fill="url(#panelGrad)" stroke="#38bdf8" stroke-width="1.5" />
+  <!-- Solar Grid Lines -->
+  <line x1="240" y1="195" x2="320" y2="195" stroke="#60a5fa" stroke-width="1.5" opacity="0.7" />
+  <line x1="280" y1="170" x2="280" y2="220" stroke="#60a5fa" stroke-width="1.5" opacity="0.7" />
+
+  <!-- Giant Eco Lightbulb (Symbolizing School Energy Awareness) -->
+  <g transform="translate(100, 110)">
+    <!-- Glow behind bulb -->
+    <circle cx="50" cy="50" r="55" fill="#fef3c7" opacity="0.45" filter="url(#softGlow)" />
+    <!-- Bulb Glass -->
+    <path d="M 50 10 C 25 10 15 30 15 50 C 15 65 25 75 30 85 L 70 85 C 75 75 85 65 85 50 C 85 30 75 10 50 10 Z" fill="url(#bulbGrad)" stroke="#f59e0b" stroke-width="2.5" />
+    <!-- Sprout / Leaf inside Bulb -->
+    <path d="M 50 70 C 50 50 65 38 72 35 C 72 48 60 65 50 70 Z" fill="url(#leafGrad)" />
+    <path d="M 50 70 C 50 55 38 45 32 42 C 32 52 42 65 50 70 Z" fill="#52b788" />
+    <line x1="50" y1="70" x2="50" y2="35" stroke="#1b4332" stroke-width="2" />
+    <!-- Bulb Base -->
+    <rect x="34" y="85" width="32" height="6" rx="2" fill="#94a3b8" />
+    <rect x="36" y="91" width="28" height="6" rx="2" fill="#64748b" />
+    <path d="M 40 97 Q 50 104 60 97 Z" fill="#475569" />
+  </g>
+
+  <!-- Wind Turbine -->
+  <g transform="translate(420, 200)">
+    <!-- Tower -->
+    <polygon points="38,160 42,160 41,50 39,50" fill="#94a3b8" />
+    <!-- Nacelle -->
+    <circle cx="40" cy="50" r="6" fill="#475569" />
+    <!-- Blades -->
+    <polygon points="40,50 36,10 44,10" fill="#cbd5e1" />
+    <polygon points="40,50 75,70 70,76" fill="#e2e8f0" />
+    <polygon points="40,50 15,75 10,70" fill="#cbd5e1" />
+  </g>
+
+  <!-- Modern Trees & Flora -->
+  <!-- Tree 1 -->
+  <circle cx="170" cy="330" r="28" fill="#52b788" />
+  <circle cx="170" cy="325" r="22" fill="#74c69d" />
+  <rect x="166" y="345" width="8" height="25" rx="2" fill="#1b4332" />
+
+  <!-- Tree 2 -->
+  <circle cx="390" cy="340" r="22" fill="#40916c" />
+  <circle cx="390" cy="335" r="16" fill="#52b788" />
+  <rect x="387" y="350" width="6" height="20" rx="2" fill="#1b4332" />
+
+  <!-- Floating Green Energy Icons -->
+  <g transform="translate(360, 140)">
+    <circle cx="18" cy="18" r="18" fill="#ffffff" filter="url(#softGlow)" />
+    <!-- Lightning bolt -->
+    <path d="M 20 8 L 12 19 L 18 19 L 16 28 L 24 17 L 18 17 Z" fill="#f59e0b" />
+  </g>
+
+  <g transform="translate(80, 260)">
+    <circle cx="16" cy="16" r="16" fill="#ffffff" filter="url(#softGlow)" />
+    <!-- Leaf icon -->
+    <path d="M 23 10 C 14 10 9 17 9 24 C 16 24 23 19 23 10 Z" fill="#40916c" />
+    <path d="M 9 24 L 20 13" stroke="#2d6a4f" stroke-width="1.5" />
+  </g>
+
+  <!-- Sparkling Stars/Aura -->
+  <path d="M 200 80 Q 200 90 210 90 Q 200 90 200 100 Q 200 90 190 90 Q 200 90 200 80 Z" fill="#f59e0b" />
+  <path d="M 480 220 Q 480 227 487 227 Q 480 227 480 234 Q 480 227 473 227 Q 480 227 480 220 Z" fill="#52b788" />
+</svg>

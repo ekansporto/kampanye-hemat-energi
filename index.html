@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENERGIZE — Gerakan Hemat Energi di Sekolah untuk proyek ESD (Education for Sustainable Development) oleh Kelompok 5. Gunakan Energi Secukupnya, Jaga Bumi Selamanya.">
+  <meta name="keywords" content="hemat energi, konservasi energi, ESD project, sekolah hijau, eco friendly school, kelola energi">
+  <meta name="author" content="Kelompok 5">
+  
+  <title>ENERGIZE — Gerakan Hemat Energi di Sekolah | ESD Project</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER & NAVBAR ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ENERGIZE Beranda">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+        </div>
+        <span>ENERGIZE</span>
+        <span class="brand-badge">ESD</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
+        <a href="index.html" class="nav-link active" aria-current="page">Beranda</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
+        <a href="#teaser" class="nav-link trigger-data-fakta">
+          Data & Fakta
+          <span class="nav-tag-phase">Fase 2</span>
+        </a>
+        <a href="#aksi" class="nav-link trigger-aksi">
+          Aksi
+          <span class="nav-tag-phase">Fase 3</span>
+        </a>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero-section" id="hero">
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Content -->
+          <div class="hero-content fade-in-up">
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>GERAKAN HEMAT ENERGI • ESD PROJECT</span>
+            </div>
+            
+            <h1 class="hero-title">
+              Mulai dari Hal Kecil, <span class="highlight">Hemat Energi</span> untuk Masa Depan.
+            </h1>
+            
+            <p class="hero-subtitle">
+              Setiap lampu yang dimatikan, setiap perangkat yang digunakan dengan bijak, dan setiap kebiasaan kecil dapat membantu menciptakan lingkungan sekolah yang lebih hemat dan berkelanjutan.
+            </p>
+            
+            <div class="hero-actions">
+              <a href="tentang.html" class="btn btn-primary btn-icon-right">
+                <span>Kenali Kampanyenya</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#why-matters" class="btn btn-secondary">
+                Kenapa Ini Penting?
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Illustration Card -->
+          <div class="hero-visual fade-in-up">
+            <div class="visual-canvas-card">
+              <img src="assets/images/hero-illustration.svg" alt="Ilustrasi Kampanye Hemat Energi di Lingkungan Sekolah" class="hero-svg-art" width="560" height="440">
+            </div>
+
+            <!-- Floating Stat Badges -->
+            <div class="floating-stat-card stat-card-1">
+              <div class="stat-icon green">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2v8"></path>
+                  <path d="m4.93 10.93 1.41 1.41"></path>
+                  <path d="M2 18h2"></path>
+                  <path d="M20 18h2"></path>
+                  <path d="m19.07 10.93-1.41 1.41"></path>
+                  <path d="M22 22H2"></path>
+                  <path d="m8 22 4-10 4 10"></path>
+                </svg>
+              </div>
+              <div class="stat-text">
+                <strong>Konservasi Energi</strong>
+                <span>Langkah Nyata di Sekolah</span>
+              </div>
+            </div>
+
+            <div class="floating-stat-card stat-card-2">
+              <div class="stat-icon yellow">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              </div>
+              <div class="stat-text">
+                <strong>Bijak & Efisien</strong>
+                <span>Cahaya & Daya Optimal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== QUICK IMPACT / STATEMENT ==================== -->
+    <section class="statement-section" id="impact">
+      <div class="container">
+        <!-- Statement Banner -->
+        <div class="statement-banner fade-in-up">
+          <span class="statement-lead">ENERGI BUKAN SEKADAR LISTRIK</span>
+          <p class="statement-quote">
+            “Cara kita menggunakan energi hari ini ikut menentukan lingkungan yang kita tinggalkan untuk masa depan.”
+          </p>
+        </div>
+
+        <!-- 3 Feature Cards -->
+        <div class="impact-grid">
+          <!-- Card 1 -->
+          <article class="impact-card fade-in-up">
+            <div class="impact-icon-wrapper icon-emerald">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="impact-title">Hemat Energi</h3>
+            <p class="impact-text">
+              Mengurangi konsumsi listrik yang tidak diperlukan tanpa mengurangi kenyamanan belajar-mengajar di kelas.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="impact-card fade-in-up">
+            <div class="impact-icon-wrapper icon-amber">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="impact-title">Peduli Lingkungan</h3>
+            <p class="impact-text">
+              Menurunkan emisi karbon dan jejak ekologis sekolah dengan menjaga kestabilan pasokan energi bumi.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="impact-card fade-in-up">
+            <div class="impact-icon-wrapper icon-mint">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+            </div>
+            <h3 class="impact-title">Kebiasaan Berkelanjutan</h3>
+            <p class="impact-text">
+              Membangun karakter siswa, guru, dan warga sekolah agar senantiasa sadar energi di mana pun berada.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY IT MATTERS SECTION ==================== -->
+    <section class="section why-section" id="why-matters">
+      <div class="container">
+        <div class="why-grid">
+          <!-- Text Column -->
+          <div class="why-content fade-in-up">
+            <span class="section-tag">Pentingnya Konservasi</span>
+            <h2>Kenapa Hemat Energi Itu Penting?</h2>
+            <p class="why-lead-text">
+              Penggunaan energi yang tidak bijak dapat menyebabkan pemborosan sumber daya dan meningkatkan dampak terhadap lingkungan. Karena itu, kebiasaan sederhana di sekolah dapat menjadi langkah awal untuk menggunakan energi secara lebih bertanggung jawab.
+            </p>
+
+            <div class="why-points-list">
+              <div class="why-point-item">
+                <div class="why-point-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div class="why-point-text">
+                  <strong>Mencegah Pemborosan Sumber Daya</strong>
+                  <p>Sebagian besar energi masih dihasilkan dari bahan bakar fosil yang terbatas jumlahnya.</p>
+                </div>
+              </div>
+
+              <div class="why-point-item">
+                <div class="why-point-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div class="why-point-text">
+                  <strong>Mengurangi Jejak Karbon Sekolah</strong>
+                  <p>Efisiensi listrik berdampak langsung pada pengurangan emisi gas rumah kaca global.</p>
+                </div>
+              </div>
+
+              <div class="why-point-item">
+                <div class="why-point-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6L9 17l-5-5"></path>
+                  </svg>
+                </div>
+                <div class="why-point-text">
+                  <strong>Mendidik Generasi Peduli Bumi</strong>
+                  <p>Kebiasaan positif yang ditanamkan di sekolah akan terbawa hingga ke rumah dan masyarakat.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Infographic / Visual Column -->
+          <div class="why-visual-box fade-in-up">
+            <h3 class="why-box-title">Sekolah Berkelanjutan (ESD)</h3>
+            <p class="why-box-sub">Prinsip Education for Sustainable Development dalam Kampanye Energi</p>
+
+            <div class="why-stats-cards">
+              <div class="why-stat-row">
+                <div class="why-stat-num">01</div>
+                <div class="why-stat-info">
+                  <strong>Edukasi Berkelanjutan</strong>
+                  <span>Menumbuhkan kesadaran kolektif seluruh warga sekolah.</span>
+                </div>
+              </div>
+
+              <div class="why-stat-row">
+                <div class="why-stat-num">02</div>
+                <div class="why-stat-info">
+                  <strong>Aksi Kolaboratif</strong>
+                  <span>Keterlibatan aktif siswa, pendidik, dan tenaga kependidikan.</span>
+                </div>
+              </div>
+
+              <div class="why-stat-row">
+                <div class="why-stat-num">03</div>
+                <div class="why-stat-info">
+                  <strong>Dampak Jangka Panjang</strong>
+                  <span>Menjaga kelestarian alam untuk generasi masa depan.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SMALL HABITS SECTION ==================== -->
+    <section class="section habits-section" id="habits">
+      <div class="container">
+        <div class="section-header fade-in-up">
+          <span class="section-tag accent">Langkah Nyata</span>
+          <h2 class="section-title">Perubahan Besar Dimulai dari Kebiasaan Kecil</h2>
+          <p class="section-desc">
+            Berikut adalah kebiasaan sederhana yang dapat langsung diterapkan di ruang kelas dan lingkungan sekolah sehari-hari.
+          </p>
+        </div>
+
+        <div class="habits-grid">
+          <!-- Habit 1 -->
+          <article class="habit-card fade-in-up">
+            <span class="habit-number">01</span>
+            <div class="habit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"></path>
+                <path d="M9 18h6"></path>
+                <path d="M10 22h4"></path>
+              </svg>
+            </div>
+            <span class="habit-badge">Lampu Kelas</span>
+            <h3 class="habit-title">Matikan Lampu Saat Tidak Digunakan</h3>
+            <p class="habit-desc">
+              Selalu matikan sakelar lampu ketika ruang kelas kosong saat jam istirahat atau sepulang sekolah.
+            </p>
+          </article>
+
+          <!-- Habit 2 -->
+          <article class="habit-card fade-in-up">
+            <span class="habit-number">02</span>
+            <div class="habit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 6L6 18"></path>
+                <path d="m6 6 12 12"></path>
+                <circle cx="12" cy="12" r="10"></circle>
+              </svg>
+            </div>
+            <span class="habit-badge">Perangkat Daya</span>
+            <h3 class="habit-title">Cabut Charger Setelah Digunakan</h3>
+            <p class="habit-desc">
+              Adaptor dan charger yang tetap tercolok terus menarik daya listrik tersembunyi (phantom power).
+            </p>
+          </article>
+
+          <!-- Habit 3 -->
+          <article class="habit-card fade-in-up">
+            <span class="habit-number">03</span>
+            <div class="habit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <span class="habit-badge">Elektronik</span>
+            <h3 class="habit-title">Matikan Perangkat Ketika Selesai</h3>
+            <p class="habit-desc">
+              Pastikan proyektor, komputer lab, kipas angin, dan pendingin ruangan dimatikan saat tidak ada aktivitas.
+            </p>
+          </article>
+
+          <!-- Habit 4 -->
+          <article class="habit-card fade-in-up">
+            <span class="habit-number">04</span>
+            <div class="habit-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2"></path>
+                <path d="M12 20v2"></path>
+                <path d="m4.93 4.93 1.41 1.41"></path>
+                <path d="m17.66 17.66 1.41 1.41"></path>
+                <path d="M2 12h2"></path>
+                <path d="M20 12h2"></path>
+                <path d="m6.34 17.66-1.41 1.41"></path>
+                <path d="m19.07 4.93-1.41 1.41"></path>
+              </svg>
+            </div>
+            <span class="habit-badge">Alami & Segar</span>
+            <h3 class="habit-title">Gunakan Cahaya Alami Jika Memungkinkan</h3>
+            <p class="habit-desc">
+              Buka jendela dan tirai di siang hari untuk memanfaatkan sinar matahari alami dan sirkulasi udara bersih.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TEASER SECTION (PHASE 2 & 3) ==================== -->
+    <section class="section teaser-section" id="teaser">
+      <div class="container">
+        <div class="teaser-card fade-in-up">
+          <div class="teaser-content">
+            <div class="teaser-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+              <span>FASE BERIKUTNYA • PENGEMBANGAN LANJUTAN</span>
+            </div>
+            <h2 class="teaser-title">Seberapa Hemat Energi Kita?</h2>
+            <p class="teaser-desc">
+              Di tahap berikutnya, website ini akan menampilkan data dan fakta dari hasil pengamatan serta angket untuk melihat kondisi penggunaan energi di lingkungan sekolah secara transparan dan akurat.
+            </p>
+            <button class="btn btn-accent trigger-data-fakta">
+              <span>Lihat Data & Fakta</span>
+              <span class="btn-icon-right">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div class="teaser-preview-box">
+            <div class="teaser-icon-graphic">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <h4 class="teaser-preview-title">Survey & Infografis Sekolah</h4>
+            <p class="teaser-preview-subtitle">Modul analitik & visualisasi data akan segera dibuka pada Fase 2.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CALL TO ACTION (CTA) ==================== -->
+    <section class="cta-section" id="cta">
+      <div class="container">
+        <div class="cta-box fade-in-up">
+          <h2 class="cta-title">Yuk, Jadi Bagian dari Perubahan.</h2>
+          <p class="cta-subtitle">Mulai dari satu kebiasaan kecil hari ini untuk masa depan sekolah yang lebih hijau.</p>
+          <a href="tentang.html" class="btn btn-primary">
+            <span>Pelajari Kampanye</span>
+            <span class="btn-icon-right">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand & Tagline -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <span>ENERGIZE</span>
+          </a>
+          <p class="footer-tagline">
+            “Gunakan Energi Secukupnya, Jaga Bumi Selamanya.”
+          </p>
+          <div class="footer-team-info">
+            <strong>Kelompok 5</strong>
+            <p>Alfira Ramadhani • Eka Nurfitria Septiani • Shofia Kamilah Wahyudi</p>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navigasi Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Beranda</a></li>
+            <li><a href="tentang.html" class="footer-link">Tentang Kampanye</a></li>
+            <li><a href="#teaser" class="footer-link trigger-data-fakta">Data & Fakta (Fase 2)</a></li>
+            <li><a href="#aksi" class="footer-link trigger-aksi">Aksi Nyata (Fase 3)</a></li>
+          </ul>
+        </div>
+
+        <!-- ESD Project Note -->
+        <div class="footer-esd-badge">
+          <strong>Proyek Sekolah ESD</strong>
+          <p>
+            Education for Sustainable Development — Membangun kesadaran lingkungan dan efisiensi konsumsi energi di tingkat sekolah menengah.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ENERGIZE — ESD Project. All rights reserved.</p>
+        <p>Dirancang dengan kepedulian lingkungan oleh <strong>Kelompok 5</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL DIALOG TEASER ==================== -->
+  <div class="modal-overlay" id="teaserModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup Dialog">&times;</button>
+      <div class="modal-icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      <span class="section-tag accent" id="modalPhaseBadge" style="margin-bottom: 0.75rem;">Fase Lanjutan</span>
+      <h3 class="modal-title" id="modalTitle">Fitur Sedang Dipersiapkan</h3>
+      <p class="modal-desc" id="modalDesc">
+        Halaman dan fitur ini akan dibuka pada fase rilis berikutnya sesuai jadwal proyek ESD.
+      </p>
+      <button class="btn btn-primary" id="modalOkBtn" style="width: 100%;">
+        Mengerti, Terima Kasih
+      </button>
+    </div>
+  </div>
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>

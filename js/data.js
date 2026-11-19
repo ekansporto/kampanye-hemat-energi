@@ -1911,7 +1911,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ============================================================
-     STICKY HEADER + BACK TO TOP + MOBILE MENU + MODAL
+     STICKY HEADER + BACK TO TOP + MOBILE MENU
      ============================================================ */
   function initNavUI() {
     const header    = document.getElementById('siteHeader');
@@ -1951,43 +1951,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // Modal Fase 3
-    const modal    = document.getElementById('teaserModal');
-    const closeBtn = document.getElementById('modalCloseBtn');
-    const okBtn    = document.getElementById('modalOkBtn');
-    const titleEl  = document.getElementById('modalTitle');
-    const descEl   = document.getElementById('modalDesc');
-    const badgeEl  = document.getElementById('modalPhaseBadge');
-
-    function bukaModal(fase, judul, deskripsi) {
-      if (!modal) return;
-      if (badgeEl) badgeEl.textContent = fase;
-      if (titleEl) titleEl.textContent = judul;
-      if (descEl)  descEl.textContent  = deskripsi;
-      modal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-    function tutupModal() {
-      if (!modal) return;
-      modal.classList.remove('active');
-      document.body.style.overflow = '';
-    }
-
-    if (closeBtn) closeBtn.addEventListener('click', tutupModal);
-    if (okBtn)    okBtn.addEventListener('click', tutupModal);
-    if (modal)    modal.addEventListener('click', e => { if (e.target === modal) tutupModal(); });
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') tutupModal(); });
-
-    document.querySelectorAll('.trigger-aksi').forEach(btn => {
-      btn.addEventListener('click', e => {
-        e.preventDefault();
-        bukaModal(
-          'Fase 3 • Segera Hadir',
-          'Aksi Nyata & Rekomendasi',
-          'Fitur interaktif Aksi dan Rekomendasi Hemat Energi akan diluncurkan pada Fase 3. Warga sekolah nantinya dapat berpartisipasi langsung dalam tantangan hemat energi, checklist kelas hijau, dan pledge konservasi.'
-        );
-      });
-    });
   }
 
 }); // END DOMContentLoaded

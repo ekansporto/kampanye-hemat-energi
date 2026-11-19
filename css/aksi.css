@@ -1,0 +1,499 @@
+.action-hero {
+  padding: 6rem 0 5rem;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(245, 158, 11, .16), transparent 25rem),
+    linear-gradient(145deg, var(--bg-main), var(--primary-50));
+}
+
+.action-hero-content {
+  max-width: 900px;
+}
+
+.action-hero-title {
+  margin: 1.25rem 0;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.12;
+}
+
+.action-hero-title span {
+  color: var(--primary-600);
+}
+
+.action-hero-lead {
+  max-width: 720px;
+  margin-bottom: 2rem;
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.action-evidence {
+  padding-bottom: 3.5rem;
+}
+
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.evidence-card {
+  padding: 1.75rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.evidence-priority {
+  border-top: 4px solid var(--accent-500);
+}
+
+.evidence-strength {
+  border-top: 4px solid var(--primary-500);
+}
+
+.evidence-label,
+.action-data-tag {
+  color: var(--text-muted);
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.evidence-score {
+  display: block;
+  margin: .85rem 0 .45rem;
+  color: var(--primary-800);
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+.evidence-score span {
+  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.evidence-card h3 {
+  margin-bottom: .6rem;
+  font-size: 1.1rem;
+}
+
+.evidence-card p,
+.evidence-note {
+  color: var(--text-secondary);
+  font-size: .92rem;
+  line-height: 1.7;
+}
+
+.evidence-note {
+  margin-top: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 3px solid var(--primary-500);
+  background: var(--primary-50);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.action-card {
+  padding: 1.6rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.action-card-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.action-number {
+  display: grid;
+  flex: 0 0 2.75rem;
+  height: 2.75rem;
+  place-items: center;
+  border-radius: var(--radius-md);
+  background: var(--primary-100);
+  color: var(--primary-800);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.action-data-tag {
+  display: block;
+  margin-bottom: .35rem;
+  color: var(--primary-700);
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.action-card-heading h3 {
+  margin-bottom: 0;
+  font-size: 1.18rem;
+}
+
+.action-problem {
+  margin: 1.1rem 0;
+  padding: .9rem 1rem;
+  border-left: 3px solid var(--accent-500);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  background: var(--accent-50);
+  color: var(--text-secondary);
+  font-size: .92rem;
+}
+
+.action-solution-list {
+  display: grid;
+  gap: .65rem;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  font-size: .92rem;
+}
+
+.action-solution-list li::marker {
+  color: var(--primary-600);
+}
+
+.action-target {
+  margin-top: 1rem;
+  padding: .8rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-alt);
+  color: var(--text-secondary);
+  font-size: .88rem;
+}
+
+.action-checklist-section {
+  padding-top: 3rem;
+}
+
+.checklist-wrapper,
+.pledge-form-card,
+.pledge-placeholder,
+.pledge-result-card {
+  padding: 1.6rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.checklist-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.checklist-progress-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .65rem;
+  color: var(--primary-900);
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.checklist-progress-bar-bg {
+  height: .75rem;
+  overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--primary-100);
+}
+
+.checklist-progress-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--primary-600);
+  transition: width var(--transition-normal);
+}
+
+.checklist-feedback {
+  margin-top: .65rem;
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.checklist-items-grid {
+  display: grid;
+  gap: .75rem;
+  margin-top: 1.5rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: flex-start;
+  gap: .8rem;
+  padding: 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.checklist-item input,
+.form-checkbox-label input {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  margin-top: .2rem;
+  accent-color: var(--primary-600);
+}
+
+.checklist-item span {
+  display: grid;
+  gap: .2rem;
+}
+
+.checklist-item strong {
+  color: var(--primary-900);
+  font-size: .94rem;
+}
+
+.checklist-item small {
+  color: var(--text-secondary);
+  font-size: .85rem;
+  line-height: 1.5;
+}
+
+.checklist-item.checked {
+  border-color: var(--primary-400);
+  background: var(--primary-50);
+}
+
+.checklist-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.pledge-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.form-group {
+  display: grid;
+  gap: .55rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-label {
+  color: var(--primary-900);
+  font-size: .92rem;
+  font-weight: 700;
+}
+
+.form-input {
+  width: 100%;
+  min-height: 2.8rem;
+  padding: .7rem .85rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  background: var(--bg-main);
+  color: var(--text-main);
+  font: inherit;
+}
+
+.form-input:focus-visible,
+.checklist-item:focus-within,
+.form-checkbox-label:focus-within {
+  outline: 3px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+.pledge-actions-fieldset {
+  padding: 0;
+  border: 0;
+}
+
+.pledge-actions-fieldset legend {
+  margin-bottom: .65rem;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: .65rem;
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.pledge-actions-fieldset .form-checkbox-label + .form-checkbox-label {
+  margin-top: .65rem;
+}
+
+.pledge-submit {
+  width: 100%;
+}
+
+.pledge-form-message {
+  min-height: 1.5rem;
+  color: #b42318;
+  font-size: .88rem;
+}
+
+.pledge-output {
+  display: grid;
+  gap: .85rem;
+}
+
+.pledge-placeholder h3,
+.pledge-result-card h3 {
+  margin-bottom: .5rem;
+}
+
+.pledge-placeholder p,
+.pledge-privacy-note {
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.pledge-result-card {
+  border-top: 4px solid var(--primary-500);
+}
+
+.pledge-result-card[hidden] {
+  display: none;
+}
+
+.pledge-result-badge {
+  display: inline-block;
+  margin-bottom: .8rem;
+  padding: .3rem .65rem;
+  border-radius: var(--radius-full);
+  background: var(--primary-100);
+  color: var(--primary-800);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.pledge-result-name {
+  color: var(--primary-800);
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.pledge-result-class,
+.pledge-result-label {
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.pledge-result-label {
+  margin-top: 1rem;
+  font-weight: 700;
+}
+
+.pledge-result-card ul {
+  display: grid;
+  gap: .35rem;
+  margin: .5rem 0 1rem;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  font-size: .9rem;
+}
+
+.pledge-result-footer,
+.pledge-result-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: .75rem;
+  flex-wrap: wrap;
+}
+
+.pledge-result-footer {
+  padding-top: .85rem;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+  font-size: .78rem;
+}
+
+.pledge-result-buttons {
+  margin-top: 1.1rem;
+}
+
+.recommendation-content .action-detail {
+  margin-top: .9rem;
+  padding: .8rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-surface-alt);
+  font-size: .9rem;
+}
+
+.action-cta-section {
+  padding: 1rem 0 5rem;
+}
+
+.action-cta-section .cta-box {
+  padding: 3rem 2rem;
+}
+
+.action-cta-section .section-tag {
+  margin-bottom: 1rem;
+}
+
+.action-cta-section .cta-subtitle {
+  max-width: 680px;
+}
+
+@media (max-width: 800px) {
+  .evidence-grid,
+  .action-grid,
+  .pledge-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .action-hero {
+    padding: 4rem 0 3.5rem;
+  }
+
+  .action-card,
+  .checklist-wrapper,
+  .pledge-form-card,
+  .pledge-placeholder,
+  .pledge-result-card { padding: 1.2rem; }
+
+  .checklist-progress-header { flex-direction: column; gap: .2rem; }
+  .action-card-heading { gap: .75rem; }
+  .action-number { flex-basis: 2.4rem; height: 2.4rem; }
+  .action-cta-section .cta-box {
+    padding: 2rem 1.25rem;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  #pledgeResultCard,
+  #pledgeResultCard * {
+    visibility: visible !important;
+  }
+
+  #pledgeResultCard {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .pledge-result-buttons {
+    display: none;
+  }
+}

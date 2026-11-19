@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data & Fakta hasil kuesioner perilaku hemat energi siswa kelas XI — ENERGIZE ESD Project Kelompok 5.">
+  <meta name="keywords" content="data hemat energi, kuesioner perilaku energi, statistik siswa, ESD project, grafik energi sekolah">
+  <meta name="author" content="Kelompok 5">
+
+  <title>Data &amp; Fakta — ENERGIZE | ESD Project</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Chart.js via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/data.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="ENERGIZE Beranda">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+          </svg>
+        </div>
+        <span>ENERGIZE</span>
+        <span class="brand-badge">ESD</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Menu Utama">
+        <a href="index.html"   class="nav-link">Beranda</a>
+        <a href="tentang.html" class="nav-link">Tentang</a>
+        <a href="data.html"    class="nav-link active" aria-current="page">
+          Data &amp; Fakta
+          <span class="nav-tag-phase">Fase 2</span>
+        </a>
+        <a href="#" class="nav-link trigger-aksi">
+          Aksi
+          <span class="nav-tag-phase">Fase 3</span>
+        </a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobileToggle"
+              aria-label="Buka Menu Navigasi" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="data-hero-section">
+      <div class="data-hero-glow"></div>
+      <div class="container">
+        <div class="data-hero-content fade-in-up">
+
+          <span class="section-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"></line>
+              <line x1="12" y1="20" x2="12" y2="4"></line>
+              <line x1="6"  y1="20" x2="6"  y2="14"></line>
+            </svg>
+            Fase 2 · Visualisasi Data
+          </span>
+
+          <h1 class="data-hero-title">
+            Data &amp; Fakta<br>
+            <span class="highlight">Perilaku Hemat Energi</span>
+          </h1>
+
+          <p class="data-hero-lead">
+            Berikut adalah hasil kuesioner yang diisi oleh siswa Kelas XI mengenai perilaku hemat energi
+            di sekolah. Data dikumpulkan melalui Google Form pada Oktober–November 2026 dan telah
+            melalui proses verifikasi sebelum divisualisasikan di halaman ini.
+          </p>
+
+          <!-- Kartu statistik hero — diisi oleh data.js -->
+          <div class="survey-info-banner fade-in-up">
+
+            <div class="survey-info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <div>
+                <strong id="stat-responden">—</strong>
+                <span>Responden Valid</span>
+              </div>
+            </div>
+
+            <div class="survey-info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+              <div>
+                <strong id="stat-partisipasi">—</strong>
+                <span>Tingkat Partisipasi</span>
+              </div>
+            </div>
+
+            <div class="survey-info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+              </svg>
+              <div>
+                <strong id="stat-rata">—</strong>
+                <span>Rata-rata Skor (1–4)</span>
+              </div>
+            </div>
+
+            <div class="survey-info-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+              <div>
+                <strong id="stat-periode">—</strong>
+                <span>Periode Pengisian</span>
+              </div>
+            </div>
+
+          </div><!-- /survey-info-banner -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LOADER ==================== -->
+    <div id="dataLoader" class="data-loader-wrap">
+      <div class="data-loader-spinner"></div>
+      <p>Memuat data visualisasi…</p>
+    </div>
+
+    <!-- ==================== KONTEN DATA (muncul setelah fetch selesai) ==================== -->
+    <div id="dataContent" style="display:none; visibility:hidden;">
+
+      <!-- ===== KARTU SOROTAN ===== -->
+      <section class="section data-section" id="sorotan">
+        <div class="container">
+
+          <div class="section-header fade-in-up">
+            <span class="section-tag accent">Sorotan Kunci</span>
+            <h2 class="section-title">Temuan Utama Kuesioner</h2>
+            <p class="section-desc">
+              Poin-poin penting yang perlu mendapat perhatian berdasarkan hasil pengolahan data kuesioner.
+            </p>
+          </div>
+
+          <div class="highlight-cards-grid">
+
+            <div class="hl-card hl-card-green fade-in-up">
+              <div class="hl-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+              <div class="hl-card-body">
+                <span class="hl-card-label">Butir Skor Tertinggi</span>
+                <p class="hl-card-value" id="stat-tertinggi">—</p>
+              </div>
+            </div>
+
+            <div class="hl-card hl-card-amber fade-in-up">
+              <div class="hl-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8"  x2="12"    y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              </div>
+              <div class="hl-card-body">
+                <span class="hl-card-label">Butir Perlu Perhatian (Terendah)</span>
+                <p class="hl-card-value" id="stat-terendah">—</p>
+              </div>
+            </div>
+
+            <div class="hl-card hl-card-teal fade-in-up">
+              <div class="hl-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="hl-card-body">
+                <span class="hl-card-label">Jurusan Skor Tertinggi</span>
+                <p class="hl-card-value" id="stat-jurusan-tinggi">—</p>
+              </div>
+            </div>
+
+            <div class="hl-card hl-card-blue fade-in-up">
+              <div class="hl-card-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <div class="hl-card-body">
+                <span class="hl-card-label">% Rata-rata Sering/Selalu Hemat Energi</span>
+                <p class="hl-card-value" id="stat-sering">—</p>
+              </div>
+            </div>
+
+          </div><!-- /highlight-cards-grid -->
+        </div>
+      </section>
+
+      <!-- ===== GRAFIK 1: DISTRIBUSI KATEGORI ===== -->
+      <section class="section data-section section-bg-alt" id="grafik-kategori">
+        <div class="container">
+
+          <div class="chart-section-layout fade-in-up">
+
+            <!-- Teks kiri -->
+            <div class="chart-text-col">
+              <span class="section-tag">Grafik 1</span>
+              <h2>Distribusi Kategori Hasil Kuesioner</h2>
+              <p>
+                Setiap responden dikategorikan berdasarkan rata-rata skor per butir
+                (skala Likert 1–4) ke dalam 4 kategori.
+              </p>
+              <div class="chart-legend-info">
+                <div class="legend-row"><span class="legend-dot" style="background:#52b788"></span><span><strong>Sangat Baik</strong> — rata-rata ≥ 3,26</span></div>
+                <div class="legend-row"><span class="legend-dot" style="background:#fbbf24"></span><span><strong>Baik</strong> — rata-rata 2,51–3,25</span></div>
+                <div class="legend-row"><span class="legend-dot" style="background:#60a5fa"></span><span><strong>Cukup</strong> — rata-rata 1,76–2,50</span></div>
+                <div class="legend-row"><span class="legend-dot" style="background:#f87171"></span><span><strong>Kurang</strong> — rata-rata ≤ 1,75</span></div>
+              </div>
+              <p class="chart-insight">
+                <strong>Insight:</strong> Lebih dari 59% siswa berada di kategori
+                <em>Sangat Baik</em>, menunjukkan kesadaran energi yang sudah cukup tinggi
+                di kalangan siswa kelas XI.
+              </p>
+            </div>
+
+            <!-- Grafik kanan -->
+            <div class="chart-canvas-col">
+              <div class="chart-card">
+                <div class="chart-card-header">
+                  <h4>Distribusi Kategori Siswa</h4>
+                  <span class="chart-card-sub">Berdasarkan rata-rata skor per butir · 636 responden</span>
+                </div>
+                <div class="chart-donut-wrap">
+                  <canvas id="chartKategori"
+                          aria-label="Grafik donut distribusi kategori hasil kuesioner"
+                          role="img"></canvas>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== GRAFIK 2: RATA-RATA PER BUTIR ===== -->
+      <section class="section data-section" id="grafik-butir">
+        <div class="container">
+
+          <div class="section-header fade-in-up">
+            <span class="section-tag accent">Grafik 2</span>
+            <h2 class="section-title">Rata-rata Skor per Pernyataan</h2>
+            <p class="section-desc">
+              Perbandingan rata-rata skor untuk setiap butir pernyataan (P01–P10).
+              Semakin tinggi nilai, semakin sering perilaku hemat energi diterapkan.
+              Warna bar mencerminkan kategori skor.
+            </p>
+          </div>
+
+          <div class="chart-card chart-card-full fade-in-up">
+            <div class="chart-card-header">
+              <h4>Rata-rata Skor per Butir Pernyataan (P01–P10)</h4>
+              <span class="chart-card-sub">Skala 1–4 · Hover pada bar untuk detail</span>
+            </div>
+            <div class="chart-bar-horizontal-wrap">
+              <canvas id="chartButir"
+                      aria-label="Grafik horizontal bar rata-rata skor per butir pernyataan"
+                      role="img"></canvas>
+            </div>
+            <div class="chart-insight-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <p>
+                <strong>P01</strong> (Praktik hemat energi sehari-hari) mencatat rata-rata tertinggi
+                (<strong>3,51</strong>). <strong>P04</strong> (Batasi penggunaan gawai/laptop) dan
+                <strong>P09</strong> (Berani menegur teman) memiliki rata-rata terendah
+                (<strong>3,22</strong>) — keduanya layak mendapat perhatian lebih dalam kampanye.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== GRAFIK 3: PERBANDINGAN JURUSAN ===== -->
+      <section class="section data-section section-bg-alt" id="grafik-jurusan">
+        <div class="container">
+
+          <div class="section-header fade-in-up">
+            <span class="section-tag">Grafik 3</span>
+            <h2 class="section-title">Perbandingan Rata-rata Skor per Jurusan</h2>
+            <p class="section-desc">
+              Visualisasi rata-rata skor kuesioner dan jumlah responden dari setiap jurusan di kelas XI.
+              Batang <span style="color:#40916c;font-weight:700;">hijau</span> = rata-rata skor (sumbu kiri);
+              garis <span style="color:#f59e0b;font-weight:700;">oranye</span> = jumlah responden (sumbu kanan).
+            </p>
+          </div>
+
+          <div class="chart-card chart-card-full fade-in-up">
+            <div class="chart-card-header">
+              <h4>Rata-rata Skor &amp; Jumlah Responden per Jurusan</h4>
+              <span class="chart-card-sub">Batang = Rata-rata Skor · Garis = Jumlah Responden · Hover untuk detail</span>
+            </div>
+            <div class="chart-bar-vertical-wrap">
+              <canvas id="chartJurusan"
+                      aria-label="Grafik perbandingan rata-rata skor per jurusan"
+                      role="img"></canvas>
+            </div>
+
+            <!-- Tabel ringkas jurusan -->
+            <div class="chart-jurusan-table-wrap">
+              <table class="jurusan-table">
+                <thead>
+                  <tr>
+                    <th>Kode</th>
+                    <th>Jurusan</th>
+                    <th>Responden</th>
+                    <th>Rata-rata Skor</th>
+                    <th>Rata-rata Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="row-top">
+                    <td>PMN</td><td>Pemasaran</td>
+                    <td>72</td><td>3,51 ⭐</td><td>35,08</td>
+                  </tr>
+                  <tr>
+                    <td>HTL</td><td>Perhotelan</td>
+                    <td>69</td><td>3,46</td><td>34,58</td>
+                  </tr>
+                  <tr>
+                    <td>KLN</td><td>Kuliner</td>
+                    <td>71</td><td>3,43</td><td>34,30</td>
+                  </tr>
+                  <tr>
+                    <td>TJKT</td><td>Teknik Jaringan Komputer &amp; Telekomunikasi</td>
+                    <td>104</td><td>3,42</td><td>34,24</td>
+                  </tr>
+                  <tr>
+                    <td>DKV</td><td>Desain Komunikasi Visual</td>
+                    <td>107</td><td>3,34</td><td>33,45</td>
+                  </tr>
+                  <tr>
+                    <td>MPLB</td><td>Manajemen Perkantoran &amp; Layanan Bisnis</td>
+                    <td>37</td><td>3,24</td><td>32,35</td>
+                  </tr>
+                  <tr class="row-lowest">
+                    <td>PPLG</td><td>Pengembangan Perangkat Lunak &amp; Gim</td>
+                    <td>176</td><td>3,24</td><td>32,36</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="chart-insight-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <p>
+                <strong>PMN (Pemasaran)</strong> meraih rata-rata tertinggi (3,51), sementara
+                <strong>PPLG</strong> dan <strong>MPLB</strong> berada di posisi terendah (3,24).
+                Menariknya, PPLG memiliki responden terbanyak (176 siswa) namun rata-rata skor
+                terendah — ini menjadi prioritas kampanye ke depan.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== GRAFIK 4: SEBARAN SKOR TOTAL ===== -->
+      <section class="section data-section" id="grafik-sebaran">
+        <div class="container">
+
+          <div class="section-header fade-in-up">
+            <span class="section-tag accent">Grafik 4</span>
+            <h2 class="section-title">Sebaran Skor Total Responden</h2>
+            <p class="section-desc">
+              Distribusi frekuensi skor total (10 butir × skala 1–4 = rentang 10–40) seluruh responden.
+              Warna bar: <span style="color:#52b788;font-weight:700;">hijau</span> = Sangat Baik ·
+              <span style="color:#fbbf24;font-weight:700;">kuning</span> = Baik ·
+              <span style="color:#60a5fa;font-weight:700;">biru</span> = Cukup ·
+              <span style="color:#f87171;font-weight:700;">merah</span> = Kurang.
+            </p>
+          </div>
+
+          <div class="chart-card chart-card-full fade-in-up">
+            <div class="chart-card-header">
+              <h4>Sebaran Skor Total Kuesioner</h4>
+              <span class="chart-card-sub">636 responden · Skor total 10–40</span>
+            </div>
+            <div class="chart-bar-vertical-wrap">
+              <canvas id="chartSebaran"
+                      aria-label="Grafik sebaran skor total kuesioner"
+                      role="img"></canvas>
+            </div>
+            <div class="chart-insight-box">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <p>
+                Distribusi condong ke skor tinggi. Puncak di <strong>skor 30</strong> (64 siswa),
+                dan <strong>86 siswa mencapai skor sempurna (40)</strong>.
+                Ini mengindikasikan perilaku hemat energi siswa kelas XI sudah cukup positif secara keseluruhan.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== METODOLOGI ===== -->
+      <section class="section data-section section-bg-alt" id="metodologi">
+        <div class="container">
+
+          <div class="section-header fade-in-up">
+            <span class="section-tag">Metodologi</span>
+            <h2 class="section-title">Tentang Pengumpulan Data</h2>
+            <p class="section-desc">
+              Transparansi mengenai cara data dikumpulkan, diverifikasi, dan digunakan.
+            </p>
+          </div>
+
+          <div class="metodologi-grid fade-in-up">
+            <div class="metod-card">
+              <div class="metod-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                </svg>
+              </div>
+              <h3>Instrumen</h3>
+              <p>Kuesioner Google Form dengan <strong>10 butir pernyataan</strong> skala Likert 1–4 mengenai perilaku hemat energi siswa kelas XI.</p>
+            </div>
+            <div class="metod-card">
+              <div class="metod-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <h3>Periode</h3>
+              <p>Pengisian berlangsung <strong>12 Oktober – 5 November 2026</strong>. Total <strong>731 respons</strong> diterima dari Google Form.</p>
+            </div>
+            <div class="metod-card">
+              <div class="metod-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+              </div>
+              <h3>Pembersihan Data</h3>
+              <p><strong>1 baris tidak valid</strong> dibuang. <strong>94 isian ganda</strong> dieliminasi — jika siswa mengisi lebih dari sekali, dipakai isian terakhir.</p>
+            </div>
+            <div class="metod-card">
+              <div class="metod-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <h3>Privasi</h3>
+              <p>Data sudah <strong>diagregasi</strong>. Tidak terdapat nama, NIS, maupun email responden dalam file yang digunakan untuk visualisasi ini.</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div><!-- /dataContent -->
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box fade-in-up">
+          <h2 class="cta-title">Punya Pertanyaan Tentang Data Ini?</h2>
+          <p class="cta-subtitle">Kunjungi halaman Tentang untuk mengetahui lebih lanjut mengenai tim dan tujuan kampanye ENERGIZE.</p>
+          <a href="tentang.html" class="btn btn-primary">
+            <span>Tentang Kampanye</span>
+            <span class="btn-icon-right">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="brand-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                   stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <span>ENERGIZE</span>
+          </a>
+          <p class="footer-tagline">"Gunakan Energi Secukupnya, Jaga Bumi Selamanya."</p>
+          <div class="footer-team-info">
+            <strong>Kelompok 5</strong>
+            <p>Alfira Ramadhani • Eka Nurfitria Septiani • Shofia Kamilah Wahyudi</p>
+          </div>
+        </div>
+
+        <div class="footer-nav">
+          <h4 class="footer-heading">Navigasi Cepat</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"   class="footer-link">Beranda</a></li>
+            <li><a href="tentang.html" class="footer-link">Tentang Kampanye</a></li>
+            <li><a href="data.html"    class="footer-link">Data &amp; Fakta (Fase 2)</a></li>
+            <li><a href="#" class="footer-link trigger-aksi">Aksi Nyata (Fase 3)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-esd-badge">
+          <strong>Proyek Sekolah ESD</strong>
+          <p>Education for Sustainable Development — Membangun kesadaran lingkungan dan efisiensi konsumsi energi di tingkat sekolah menengah.</p>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ENERGIZE — ESD Project. All rights reserved.</p>
+        <p>Dirancang dengan kepedulian lingkungan oleh <strong>Kelompok 5</strong></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Modal Fase 3 -->
+  <div class="modal-overlay" id="teaserModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup Dialog">&times;</button>
+      <div class="modal-icon-badge">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="8"  x2="12"    y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+      </div>
+      <span class="section-tag accent" id="modalPhaseBadge" style="margin-bottom:.75rem;">Fase Lanjutan</span>
+      <h3 class="modal-title" id="modalTitle">Fitur Sedang Dipersiapkan</h3>
+      <p class="modal-desc" id="modalDesc">
+        Halaman dan fitur ini akan dibuka pada fase rilis berikutnya sesuai jadwal proyek ESD.
+      </p>
+      <button class="btn btn-primary" id="modalOkBtn" style="width:100%;">
+        Mengerti, Terima Kasih
+      </button>
+    </div>
+  </div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Script — diletakkan sebelum </body> agar DOM sudah siap -->
+  <script src="js/data.js"></script>
+
+</body>
+</html>

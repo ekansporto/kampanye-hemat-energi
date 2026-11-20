@@ -477,23 +477,54 @@
 }
 
 @media print {
-  body * {
-    visibility: hidden !important;
+  @page {
+    size: A4 portrait;
+    margin: 1.5cm;
   }
 
-  #pledgeResultCard,
-  #pledgeResultCard * {
-    visibility: visible !important;
+  html, body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  body > *:not(main),
+  main > *:not(#pledge),
+  #pledge > .container > .section-header,
+  #pledge > .container > .pledge-grid > .pledge-form-card,
+  #pledge > .container > .pledge-grid > .pledge-output > .pledge-placeholder,
+  #pledge > .container > .pledge-grid > .pledge-output > .pledge-privacy-note {
+    display: none !important;
+  }
+
+  main,
+  #pledge,
+  #pledge > .container,
+  #pledge > .container > .pledge-grid,
+  #pledge > .container > .pledge-grid > .pledge-output {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
   }
 
   #pledgeResultCard {
-    position: absolute;
-    inset: 0 auto auto 0;
-    width: 100%;
-    box-shadow: none;
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 1.5rem !important;
+    box-shadow: none !important;
+    border: 1.5px solid #ccc !important;
+    border-top: 4px solid var(--primary-500) !important;
+    border-radius: 12px !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
   }
 
   .pledge-result-buttons {
-    display: none;
+    display: none !important;
   }
 }

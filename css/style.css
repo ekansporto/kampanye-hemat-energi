@@ -1002,6 +1002,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    -------------------------------------------------------------------------- */
 .teaser-section {
   padding: 5.5rem 0;
+  overflow: hidden;
 }
 
 .teaser-card {
@@ -1059,12 +1060,15 @@ a:focus-visible, button:focus-visible, input:focus-visible {
 }
 
 .teaser-preview-box {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px dashed rgba(255, 255, 255, 0.25);
+  background: rgba(245, 158, 11, 0.18);
+  border: 1.5px solid rgba(251, 191, 36, 0.4);
   border-radius: var(--radius-lg);
-  padding: 2rem;
+  padding: 2rem 1.75rem;
   backdrop-filter: blur(10px);
   text-align: center;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .teaser-icon-graphic {
@@ -1096,6 +1100,7 @@ a:focus-visible, button:focus-visible, input:focus-visible {
    -------------------------------------------------------------------------- */
 .cta-section {
   padding: 4rem 0 5.5rem;
+  overflow: hidden;
 }
 
 .cta-box {
@@ -1107,6 +1112,9 @@ a:focus-visible, button:focus-visible, input:focus-visible {
   position: relative;
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cta-title {
